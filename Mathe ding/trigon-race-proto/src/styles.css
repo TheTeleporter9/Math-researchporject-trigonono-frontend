@@ -1,0 +1,47 @@
+:root{
+	--bg:#0a0f1e;
+	--panel:#071028;
+	--accent:#00ffb3;
+	--neon:#00ffd5;
+	--muted:#8aa0bf;
+	--glass:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box;font-family:'JetBrains Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace}
+body{margin:0;background:var(--bg);color:#d8f3ff}
+.app{max-width:1100px;margin:18px auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center}
+.view-switch button{margin-left:8px;background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:6px}
+.btn{background:linear-gradient(90deg,#00ffb3,#00d4ff);color:#031024;padding:8px 12px;border-radius:8px;border:0;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(0,213,255,0.06);transition:transform .12s ease,box-shadow .12s}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:0.45;cursor:not-allowed}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));padding:14px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.6);margin-top:14px;border:1px solid rgba(255,255,255,0.03)}
+.teacher .fake-qr{width:140px;height:140px;background:linear-gradient(135deg,#051426,#082138);color:var(--neon);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;border-radius:8px;box-shadow:0 0 18px rgba(0,255,213,0.06)}
+.pin{margin-top:8px;font-size:18px;color:var(--muted)}
+.join-controls{margin-top:8px}
+.players ul{margin:6px 0 0 18px}
+.race-dashboard .track{position:relative;border-radius:8px;border:1px solid rgba(255,255,255,0.03);overflow:hidden;background:repeating-linear-gradient(0deg, rgba(0,255,213,0.02) 0 1px, transparent 1px 40px);box-shadow:inset 0 0 40px rgba(0,255,213,0.03)}
+.race-dashboard .finish{position:absolute;right:6px;top:6px;font-size:22px}
+.runner{position:absolute;transform:translateX(-50%);text-align:center;display:flex;flex-direction:column;align-items:center}
+.runner .icon{font-size:24px;filter:drop-shadow(0 0 6px rgba(0,255,213,0.2))}
+.runner .label{background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:6px 10px;border-radius:8px;font-size:13px;color:var(--neon);border:1px solid rgba(0,255,213,0.08);white-space:nowrap;margin-top:6px}
+.student .canvas-wrap{width:540px;padding:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.measurement-badge{background:rgba(0,0,0,0.35);padding:6px 8px;border-radius:6px;color:var(--neon);font-weight:700;font-size:13px;border:1px solid rgba(0,255,213,0.06)}
+.submit-area{margin-top:12px}
+.submit-btn{background:linear-gradient(90deg,#00ffb3,#00d4ff);color:#031024;padding:12px 18px;border-radius:10px;border:0;font-weight:800;box-shadow:0 6px 20px rgba(0,213,255,0.08)}
+.flash-green{box-shadow:0 0 18px rgba(0,255,150,0.12) inset}
+.flash-red{animation:glitch 0.8s steps(2) both}
+@keyframes glitch{
+	0%{transform:translateX(0)}
+	20%{transform:translateX(-6px) skewX(-6deg)}
+	40%{transform:translateX(6px) skewX(6deg)}
+	60%{transform:translateX(-4px) skewX(-4deg)}
+	80%{transform:translateX(4px) skewX(4deg)}
+	100%{transform:translateX(0)}
+}
+.grid-overlay{pointer-events:none;position:fixed;inset:0;mix-blend-mode:screen;background-image:linear-gradient(rgba(0,255,213,0.02) 1px, transparent 1px),linear-gradient(90deg,rgba(0,255,213,0.02) 1px, transparent 1px);background-size:40px 40px,40px 40px}
+.neon-side-correct{animation:sidePulse 900ms ease-in-out}
+@keyframes sidePulse{0%{box-shadow:0 0 0 rgba(0,255,150,0.0)}50%{box-shadow:0 0 24px rgba(0,255,150,0.22)}100%{box-shadow:0 0 0 rgba(0,255,150,0.0)}}
+.label-green{fill:#7fff9e}
+.angle-label{font-size:13px}
+footer{margin-top:18px;font-size:13px;color:var(--muted)}
