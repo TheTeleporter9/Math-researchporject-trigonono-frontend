@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# VS / IDE files
+.vscode/
+*.user
+*.suo
+
+# Python / env
+__pycache__/
+*.pyc
+.env
+
+# .NET stuff
+bin/
+obj/
