@@ -19,3 +19,9 @@ __pycache__/
 # .NET stuff
 bin/
 obj/
+
+
+deployment/
+backend/
+docker-compose.yml
+.env
