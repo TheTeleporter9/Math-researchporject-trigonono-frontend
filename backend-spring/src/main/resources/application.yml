@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: trigonaut-spring
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+trigonaut:
+  teacherToken: ${TEACHER_TOKEN:}
+  corsOrigins: ${CORS_ORIGINS:*}
+
